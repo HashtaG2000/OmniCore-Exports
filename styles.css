@@ -5,21 +5,16 @@
     box-sizing: border-box;
 }
 /* Apply Quicksand globally */
-body {
-    font-family: 'Quicksand', sans-serif;
-}
 
-/* Example for specific elements */
-h1, h2, h3 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600; /* Adjust font weight as needed */
-}
 
-p {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+body  {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
-
 /* Navbar Styles */
 .navbar {
     display: grid;
@@ -52,6 +47,7 @@ p {
 }
 
 .navbar-logo {
+    text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffffff;
@@ -357,7 +353,7 @@ p {
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(100% / 3 - 20px); /* Show 3 items per slide */
+    flex: 0 0 calc(100% / 3 - 18px); /* Show 3 items per slide */
     text-align: center;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -387,6 +383,7 @@ p {
 }
 
 .read-more-btn {
+    text-decoration: none;
     padding: 10px 20px;
     background-color: #00aaff;
     color: #ffffff;
@@ -422,11 +419,13 @@ p {
 }
 
 .carousel-nav.prev {
-    left: 10px;
+    background-color: #00aaff;
+    left: 1px;
 }
 
 .carousel-nav.next {
-    right: 10px;
+    background-color: #00aaff;
+    right: 1px;
 }
 
 /* Carousel Indicators */
@@ -470,6 +469,16 @@ p {
         font-size: 1.5rem;
     }
 }
+
+/* Product type */
+.product-type {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+
 
 /* Footer Styles */
 .footer {
