@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>OmniCore Exports</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Hamburger Menu Toggle -->
+            <div class="navbar-toggle" id="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Logo -->
+            <div class="navbar-logo">
+                OmniCore Exports
+            </div>
+    
+            <!-- Navbar Links -->
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+    
+            <!-- Search Bar -->
+            <div class="navbar-search">
+                <input type="text" id="search" placeholder="Search...">
+                <button id="search-btn">Go</button>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Nutraceutical Excellence</h1>
+            <p>Discover the best in nutraceutical products</p>
+            <a href="#products" class="btn">View Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>Why Choose Us?</h2>
+            <h3>Your partner in quality products</h3>
+            <p>
+                OmniCore Exports stands at the forefront of the nutraceutical industry, specializing in the trade and export of high-quality products. Based in Mumbai, we are dedicated to meeting the diverse needs of our clients, providing a wide array of nutraceuticals that promote health and wellness.
+            </p>
+            <p>
+                Our expertise ensures that each product meets the highest standards of quality and efficacy. With a focus on customer satisfaction, we aim to build lasting partnerships while expanding our reach in the global market.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="/images/aboutus.png" alt="Nutraceutical Products">
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="products" class="product-section">
+        <h2>Our Products</h2>
+        <p>Elevate health with quality solutions</p>
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Add as many product cards as needed -->
+                <div class="product-card">
+                    <img src="/images/pills.png" alt="Omega-3 Fish Oil Capsules">
+                    <h3>Omega-3 fish oil capsules</h3>
+                    <p>Boost your health with essential Omega-3 fatty acids.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <div class="product-card">
+                    <img src="/images/multivitamins.png" alt="Multivitamin Gummies">
+                    <h3>Multivitamin gummies</h3>
+                    <p>Delicious gummies packed with essential vitamins.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <div class="product-card">
+                    <img src="/images/ashwagandha.png" alt="Turmeric Curcumin Capsules">
+                    <h3>Turmeric curcumin capsules</h3>
+                    <p>Natural anti-inflammatory support with turmeric curcumin.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <div class="product-card">
+                    <img src="/images/pills.png" alt="Omega-3 Fish Oil Capsules">
+                    <h3>Omega-3 fish oil capsules</h3>
+                    <p>Boost your health with essential Omega-3 fatty acids.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <div class="product-card">
+                    <img src="/images/multivitamins.png" alt="Multivitamin Gummies">
+                    <h3>Multivitamin gummies</h3>
+                    <p>Delicious gummies packed with essential vitamins.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <div class="product-card">
+                    <img src="/images/ashwagandha.png" alt="Turmeric Curcumin Capsules">
+                    <h3>Turmeric curcumin capsules</h3>
+                    <p>Natural anti-inflammatory support with turmeric curcumin.</p>
+                    <button class="read-more-btn">Read more</button>
+                </div>
+                <!-- Repeat as needed -->
+            </div>
+            
+            <button class="carousel-nav prev" id="prev-btn">&#10094;</button>
+            <button class="carousel-nav next" id="next-btn">&#10095;</button>
+        </div>
+
+        <div class="carousel-indicators">
+            <!-- Indicators will be generated dynamically -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>OmniCore Exports</h2>
+            </div>
+            <div class="footer-item">
+                <h3>Location</h3>
+                <p>Mumbai, MH IN</p>
+            </div>
+            <div class="footer-item">
+                <h3>Reach out</h3>
+                <p><a href="mailto:varmaratnesh25@gmail.com">varmaratnesh25@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+            const toggleButton = document.getElementById('navbar-toggle');
+            const navbarLinks = document.getElementById('navbar-links');
+        
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active'); // Toggle the 'active' class
+            });      
+
+
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.getElementById('next-btn');
+        const prevButton = document.getElementById('prev-btn');
+        const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+        const itemsPerSlide = 3; // Number of items visible at a time
+        let currentIndex = 0;
+        const totalSlides = Math.ceil(slides.length / itemsPerSlide);
+
+        // Dynamically generate indicators
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('span');
+            indicator.classList.add('indicator');
+            if (i === 0) indicator.classList.add('active');
+            indicator.dataset.index = i;
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = Array.from(indicatorsContainer.children);
+
+        function updateCarousel() {
+            const slideWidth = track.getBoundingClientRect().width / itemsPerSlide;
+            track.style.transform = `translateX(-${currentIndex * slideWidth * itemsPerSlide}px)`;
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        indicators.forEach((indicator) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = parseInt(indicator.dataset.index, 10);
+                updateCarousel();
+            });
+        });
+
+        updateCarousel();
+    </script>
+    <script>
+        const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('search');
+
+searchBtn.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase(); // Get the search query
+    if (!query) {
+        alert('Please enter a search query.');
+        return;
+    }
+
+    // Get all text content from the page to search within
+    const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, .btn, .read-more-btn'); // Add classes or tags to search in
+    let found = false;
+
+    elementsToSearch.forEach((element) => {
+        const text = element.textContent.toLowerCase();
+        if (text.includes(query)) {
+            found = true;
+            element.style.backgroundColor = 'yellow'; // Highlight the result
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to the result
+        } else {
+            element.style.backgroundColor = ''; // Clear previous highlights
+        }
+    });
+
+    if (!found) {
+        alert('No matching content found on the page.');
+    }
+});
+
+    </script>
+</body>
+</html>
