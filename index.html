@@ -523,34 +523,49 @@
     <script>
         const searchBtn = document.getElementById('search-btn');
         const searchInput = document.getElementById('search');
-
-            searchBtn.addEventListener('click', () => {
-                const query = searchInput.value.trim().toLowerCase(); // Get the search query
-                if (!query) {
-                    alert('Please enter a search query.');
-                    return;
-                }
-
-                // Get all text content from the page to search within
-                const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, .btn, .read-more-btn'); // Add classes or tags to search in
-                let found = false;
-
-                elementsToSearch.forEach((element) => {
-                    const text = element.textContent.toLowerCase();
-                    if (text.includes(query)) {
-                        found = true;
-                        element.style.backgroundColor = 'yellow'; // Highlight the result
-                        element.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Scroll to the result
-                    } else {
-                        element.style.backgroundColor = ''; // Clear previous highlights
-                    }
-                });
-
-                if (!found) {
-                    alert('No matching content found on the page.');
+    
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim().toLowerCase(); // Get the search query
+            if (!query) {
+                alert('Please enter a search query.');
+                return;
+            }
+    
+            // Get all text content from the page to search within
+            const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item'); // Add relevant tags/classes
+            let results = []; // Array to store matching elements
+    
+            elementsToSearch.forEach((element) => {
+                const text = element.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    results.push(element); // Add matching element to results array
+                    element.style.backgroundColor = 'yellow'; // Highlight the result
+                } else {
+                    element.style.backgroundColor = ''; // Clear previous highlights
                 }
             });
-            </script>
+    
+            if (results.length > 0) {
+                // Scroll to the first result
+                results[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+                alert(`${results.length} matching result(s) found.`);
+            } else {
+                alert('No matching content found on the page.');
+            }
+        });
+    
+        // Reset all highlights when input is cleared
+        searchInput.addEventListener('input', () => {
+            if (!searchInput.value.trim()) {
+                const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn');
+                elementsToSearch.forEach((element) => {
+                    element.style.backgroundColor = ''; // Clear highlights
+                });
+            }
+        });
+    </script>
+    
 
         <!-- JavaScript Filter and Pagination -->
             <script>
