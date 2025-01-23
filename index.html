@@ -532,7 +532,7 @@
             }
     
             // Get all text content from the page to search within
-            const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item'); // Add relevant tags/classes
+            const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item, .why-omnicore-section, .vision-section, .footer, .about-section, .hero-section'); // Add relevant tags/classes
             let results = []; // Array to store matching elements
     
             elementsToSearch.forEach((element) => {
@@ -558,7 +558,7 @@
         // Reset all highlights when input is cleared
         searchInput.addEventListener('input', () => {
             if (!searchInput.value.trim()) {
-                const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn');
+                const elementsToSearch = document.querySelectorAll('h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item, .why-omnicore-section, .vision-section, .footer, .about-section, .hero-section');
                 elementsToSearch.forEach((element) => {
                     element.style.backgroundColor = ''; // Clear highlights
                 });
