@@ -247,17 +247,18 @@ body  {
     align-items: center;
     justify-content: center;
     background-color: #f4f5f7;
-    padding: 50px 20px;
+    padding: 50px 40px;
+    margin: 30px 0;
     gap: 0px;
 }
 
 .about-content {
     background-color: #e0e0e0;
     padding: 40px;
-    width: calc(50% + 120px);
+    width: calc(50% + 100px);
     position: relative;
     z-index: 2;
-    transform: translateX(120px);
+    transform: translateX(100px);
     margin: 0 0 0 -240px;;
 }
 
@@ -282,7 +283,7 @@ body  {
 }
 
 .about-image {
-    width: 60vh;
+    width: 45vh;
     overflow:auto;
     display: flex;
     justify-content: center;
@@ -468,12 +469,9 @@ body  {
 
 /* Categories Sidebar */
 .categories {
-    width: 30%;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    width: 20%;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .categories h3 {
@@ -493,12 +491,12 @@ body  {
     cursor: pointer;
     color: #555;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .categories ul li:hover,
 .categories ul li.active {
-    background-color: #24d278;
+    background-color: #3bce82;
     color: #ffffff;
 }
 
@@ -660,7 +658,7 @@ body  {
     }
 
     .navbar-search {
-        width: 100%;
+        width: 80%;
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
@@ -707,13 +705,13 @@ body  {
 
     .btn {
         padding: 8px 15px;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     /* About Section */
     .about-section {
         flex-direction: column;
-        padding: 20px 10px;
+        padding: 10px 20px;
     }
 
     .about-content,
@@ -723,21 +721,37 @@ body  {
         padding: 10px;
     }
 
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-content p {
+        font-size: 0.8rem;
+    }
+
     .about-content {
         transform: none;
     }
 
     /* Vision Section */
     .vision-section {
-        padding: 20px 10px;
+        padding: 10px 20px;
     }
 
     .vision-container {
-        text-align: center;
+        text-align: left;
+    }
+
+    .vision-section h2 {
+        font-size: 1.5rem;
     }
 
     .vision-description p {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
         margin-bottom: 15px;
     }
 
@@ -769,12 +783,16 @@ body  {
         padding: 15px;
     }
 
+    .why-omnicore-card h2 {
+        font-size: 1.5rem;
+    }
+
     .why-omnicore-card h3 {
         font-size: 1.2rem;
     }
 
     .why-omnicore-card p {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
     }
 
     .icon-wrapper {
