@@ -493,7 +493,7 @@ body  {
     width: 100%;
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 25px;
+    border-radius: 18px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -511,7 +511,7 @@ body  {
 }
 
 #search-suggestions li:hover {
-    background-color: #f1f1f1;
+    background-color: #237f5d;
 }
 
 
