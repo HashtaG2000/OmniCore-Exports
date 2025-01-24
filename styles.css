@@ -1,4 +1,19 @@
 /* General Reset */
+@font-face {
+    font-family: 'Aquatico-Regular';
+    src: url('./fonts/Aquatico-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define Hero Font */
+@font-face {
+    font-family: 'Ludicrous';
+    src: url('./fonts/Ludicrous.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +39,7 @@ body  {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    background-color: #24d278;
+    background-color: #ffffff;
     color: #ffffff;
     padding: 15px 30px;
     position: sticky;
@@ -41,7 +56,7 @@ body  {
 
 .navbar-links li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #00a87e;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -52,8 +67,9 @@ body  {
 
 /* Navbar Logo Styles */
 .navbar-logo a {
+    font-family: 'AquaticoRegular', sans-serif; /* Fallback to sans-serif */
     text-decoration: none; /* Remove underline */
-    color: #ffffff; /* Match the text color */
+    color: #00a87e; /* Match the text color */
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -63,49 +79,14 @@ body  {
 }
 
 
-.navbar-search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-self: end;
-}
-
-.navbar-search input {
-    padding: 8px;
-    font-size: 1rem;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    outline: none;
-    color: #333;
-}
-
-.navbar-search input::placeholder {
-    color: #aaa;
-}
-
-.navbar-search button {
-    padding: 8px 15px;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #24d278;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-search button:hover {
-    background-color: #252525;
-    color: #ffffff;
-}
 
 /* General Navbar Styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #24d278;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #00a87e;
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -120,7 +101,7 @@ body  {
 
 .navbar-links li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #00a87e;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -133,53 +114,29 @@ body  {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #00a87e;
     text-align: center;
     
 }
 
-.navbar-search {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar-search input {
-    padding: 8px;
-    font-size: 1rem;
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    outline: none;
-}
-
-.navbar-search button {
-    padding: 8px 15px;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #24d278;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-search button:hover {
-    background-color: #252525;
-}
-
+/* Hamburger Menu */
 /* Hamburger Menu */
 .navbar-toggle {
-    display: none; /* Hidden by default */
+    display: none; /* Display the hamburger menu */
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    position: absolute; /* Position it relative to the parent container */
+    left: 20px; /* Move it to the left of the navbar */
+    top: 20px; /* Adjust spacing from the top */
+    z-index: 10; /* Ensure it stays on top of other elements */
 }
 
 .navbar-toggle span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: #008080; /* Color of the hamburger lines */
     transition: all 0.3s ease;
 }
 
@@ -215,8 +172,11 @@ body  {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-family: 'Ludicrous', serif; /* Fallback to serif */
+    font-size: 3rem;
     margin-bottom: 10px;
+    color: #ffffff;
+    /* text-shadow: 0 4px 10px rgba(255, 255, 255, 0.705); */
 }
 
 .hero p {
@@ -228,7 +188,7 @@ body  {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #24d278;
+    background-color: #00a87e;
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
@@ -263,7 +223,7 @@ body  {
 }
 
 .about-content h2 {
-    color: #24d278;
+    color: #00a87e;
     font-size: 2rem;
     margin-bottom: 10px;
 }
@@ -302,6 +262,7 @@ body  {
     padding: 50px 20px;
     background-color: #f4f5f7; /* Light background for contrast */
     text-align: center;
+    margin: 50px 0;
 }
 
 .vision-container {
@@ -312,7 +273,7 @@ body  {
 
 .vision-section h2 {
     font-size: 2rem;
-    color: #24d278;
+    color: #00a87e;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -367,8 +328,9 @@ body  {
 }
 
 .section-heading {
+    
     font-size: 2rem;
-    color: #1f194c;
+    color: #00a87e;
     margin-bottom: 30px;
 }
 
@@ -385,7 +347,7 @@ body  {
 }
 
 .why-omnicore-card {
-    background: linear-gradient(#ffffff 50%, #24d278 50%);
+    background: linear-gradient(#ffffff 50%, #00a87e 50%);
     background-size: 100% 200%;
     background-position: 0 2.5%;
     padding: 20px;
@@ -424,7 +386,7 @@ body  {
 }
 
 .icon-wrapper {
-    background-color: #24d278;
+    background-color: #00a87e;
     font-size: 30px;
     width: 60px;
     height: 60px;
@@ -439,7 +401,7 @@ body  {
 
 .why-omnicore-card:hover .icon-wrapper {
     background-color: #ffffff;
-    color: #24d278;
+    color: #00a87e;
 }
 
 
@@ -462,7 +424,7 @@ body  {
 
 .product-section h2 {
     font-size: 2rem;
-    color: #1f194c;
+    color: #00a87e;
     margin: 20px 0;
     text-align: center;
 }
@@ -496,9 +458,62 @@ body  {
 
 .categories ul li:hover,
 .categories ul li.active {
-    background-color: #3bce82;
+    background-color: #00a87e;
     color: #ffffff;
 }
+
+/* Search Bar Container */
+#category-search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Search Input */
+#category-search {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+#category-search:focus {
+    border-color: #8679ec;
+}
+
+/* Suggestion Box */
+#search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 14px;
+}
+
+#search-suggestions li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-suggestions li:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Product List Container */
 .product-list-container {
@@ -532,7 +547,7 @@ body  {
 }
 
 .product-item:hover {
-    background-color: #24d278;
+    background-color: #00a87e;
     color: #ffffff;
 }
 
@@ -556,12 +571,12 @@ body  {
 }
 
 .pagination-button:hover {
-    background-color: #24d278;
+    background-color: #00a87e;
     color: #ffffff;
 }
 
 .pagination-button.active {
-    background-color: #24d278;
+    background-color: #00a87e;
     color: #ffffff;
     font-weight: bold;
 }
@@ -575,7 +590,7 @@ body  {
 
 /* Footer Styles */
 .footer {
-    background-color: #24d278;
+    background-color: #00a87e;
     color: #ffffff;
     padding-top: 30px;
     text-align: center;
@@ -626,7 +641,7 @@ body  {
     bottom: 20px;
     right: 20px;
     padding: 10px 15px;
-    background-color: #24d278;
+    background-color: #00a87e;
     color: white;
     border: none;
     border-radius: 5px;
@@ -657,24 +672,13 @@ body  {
         text-align: center;
     }
 
-    .navbar-search {
-        width: 80%;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar-search input {
-        width: 70%; /* Adjust width of the input field */
-    }
-
     .navbar-links {
         display: none; /* Hide navbar links by default */
         flex-direction: column;
         width: 100%;
         text-align: center;
         padding: 10px 0;
-        background-color: #24d278;
+        background-color: #ffffff;
     }
 
     .navbar-links.active {
@@ -805,6 +809,7 @@ body  {
         flex-direction: column;
         padding: 10px;
     }
+
 
     .categories {
         width: 100%;

@@ -17,6 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://use.typekit.net/xxxxxxx.css">
     <title>OmniCore Exports</title>
 </head>
 <body>
@@ -32,23 +34,22 @@
             
             <!-- Logo -->
             <div class="navbar-logo">
-                <a href="#home">OmniCore Exports</a>
+                <div class="FontMarket">
+                <a href="#home">OmniCore Exports</a></div>
             </div>
     
             <!-- Navbar Links -->
             <ul class="navbar-links" id="navbar-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#vision">VISION</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#footer">CONTACT US</a></li>
+                <li><b><a href="#home">HOME</a></b></li>
+                <li><b><a href="#about">ABOUT</a></b></li>
+                <li><b><a href="#products">PRODUCTS</a></b></li>
+                <li><b><a href="#footer">CONTACT US</a></b></li>
+            </ul>
+            <ul class="navbar-contact">
+                <li><b><a href="mailto:info@omnicore.in">info@omnicore.in</a></b></li>
+                <li><b><a href="">+91-1234567890</a></b></li>
             </ul>
     
-            <!-- Search Bar -->
-            <div class="navbar-search">
-                <input type="text" id="search" placeholder="Search...">
-                <button id="search-btn">Go</button>
-            </div>
         </nav>
     </header>
     
@@ -100,6 +101,15 @@
         <div class="product-container">
             <!-- Categories Sidebar -->
             <div class="categories">
+                <div id="category-search-container">
+                    <input
+                        type="text"
+                        id="category-search"
+                        placeholder="Search in categories..."
+                        autocomplete="off"
+                    />
+                    <ul id="search-suggestions" class="suggestion-box"></ul>
+                </div>
                 <ul id="category-list">
                     <li class="active" data-category="all"><b>ALL</b></li>
                     <li data-category="phytochemicals"><b>PHYTOCHEMICALS & HERBAL EXTRACTS</b></li>
@@ -400,7 +410,61 @@
             </div>
         </div>
     </section>
-    
+   
+    <!-- Why Choose Us Section -->
+    <section id="why-omnicore" class="why-omnicore-section">
+            <h2 class="section-heading">Why OmniCore?</h2>
+            <div class="why-omnicore-row">
+                <div class="why-omnicore-column">
+                    <div class="why-omnicore-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Expert Team</h3>
+                        <p>
+                            A dedicated, cohesive team with years of experience in the field, committed to providing top-notch service.
+                            We ensure prompt response typically within 24 hours even when working across diverse time zones.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-omnicore-column">
+                    <div class="why-omnicore-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Reliable Manufacturing Network</h3>
+                        <p>
+                            Backed by a pool of validated, approved small and medium manufacturers for timely, cost-effective deliveries. 
+                            We also collaborate with leading manufacturers for regulated and semi-regulated markets based on customer needs.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-omnicore-column">
+                    <div class="why-omnicore-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-brush"></i>
+                        </div>
+                        <h3>Comprehensive Product Portfolio</h3>
+                        <p>
+                            Offering a wide range of products across categories and therapeutic segments, 
+                            with expertise in sourcing innovative molecules and niche products.
+                        </p>
+                    </div>
+                </div>
+                <div class="why-omnicore-column">
+                    <div class="why-omnicore-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-truck-pickup"></i>
+                        </div>
+                        <h3>Efficient Logistics Expertise</h3>
+                        <p>
+                            Specialized in consolidating cargo shipments by sea and air from multiple factories, optimizing time and shipping costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <!-- Vision Section -->
     <section id="vision" class="vision-section">
         <div class="vision-container">
@@ -428,60 +492,6 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-omnicore" class="why-omnicore-section">
-        <h2 class="section-heading">Why OmniCore?</h2>
-        <div class="why-omnicore-row">
-            <div class="why-omnicore-column">
-                <div class="why-omnicore-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <h3>Expert Team</h3>
-                    <p>
-                        A dedicated, cohesive team with years of experience in the field, committed to providing top-notch service.
-                        We ensure prompt response typically within 24 hours even when working across diverse time zones.
-                    </p>
-                </div>
-            </div>
-            <div class="why-omnicore-column">
-                <div class="why-omnicore-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-brush"></i>
-                    </div>
-                    <h3>Comprehensive Product Portfolio</h3>
-                    <p>
-                        Offering a wide range of products across categories and therapeutic segments, 
-                        with expertise in sourcing innovative molecules and niche products.
-                    </p>
-                </div>
-            </div>
-            <div class="why-omnicore-column">
-                <div class="why-omnicore-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <h3>Reliable Manufacturing Network</h3>
-                    <p>
-                        Backed by a pool of validated, approved small and medium manufacturers for timely, cost-effective deliveries. 
-                        We also collaborate with leading manufacturers for regulated and semi-regulated markets based on customer needs.
-                    </p>
-                </div>
-            </div>
-            <div class="why-omnicore-column">
-                <div class="why-omnicore-card">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-truck-pickup"></i>
-                    </div>
-                    <h3>Efficient Logistics Expertise</h3>
-                    <p>
-                        Specialized in consolidating cargo shipments by sea and air from multiple factories, optimizing time and shipping costs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="footer-container">
@@ -489,8 +499,8 @@
                 <h2>OmniCore Exports</h2>
             </div>
             <div class="footer-item">
-                <h3>Location</h3>
-                <p>Old Barrack, Mulund Colony, Mulund West, Mumbai – 400082</p>
+                <h3>Address</h3>
+                <p>Mulund Colony, Mulund West, Mumbai – 400082</p>
             </div>
             <div class="footer-item">
                 <h3>Reach out</h3>
@@ -513,115 +523,147 @@
                 navbarLinks.classList.toggle('active'); // Toggle the 'active' class
             });
     </script>
-
-    <!-- JavaScript Search -->
+    
+<!-- JavaScript Filter and Pagination -->
     <script>
-        const searchBtn = document.getElementById('search-btn');
-        const searchInput = document.getElementById('search');
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryList = document.getElementById('category-list'); // The category list container
+            const productItems = Array.from(document.querySelectorAll('.product-item')); // All product items
         
-        // Function to handle search logic
-        function performSearch() {
-            const query = searchInput.value.trim().toLowerCase(); // Get the search query
-            if (!query) {
-                alert('Please enter a search query.');
-                return;
+            // Function to filter and display products based on category
+            function filterProducts(selectedCategory) {
+                productItems.forEach((item) => {
+                    const itemCategory = item.dataset.category; // Get the item's category from data-category attribute
+        
+                    // Show all products if 'all' is selected, otherwise show matching products
+                    if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             }
         
-            // Get all text content from the page to search within
-            const elementsToSearch = document.querySelectorAll(
-                'h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item, .why-omnicore-section, .vision-section, .footer, .about-section, .hero-section'
-            ); // Add relevant tags/classes
-            let results = []; // Array to store matching elements
+            // Add click event listener to each category
+            categoryList.addEventListener('click', (event) => {
+                const target = event.target.closest('li'); // Ensure the closest `li` is targeted
+                if (target && categoryList.contains(target)) {
+                    // Remove active class from all categories
+                    document.querySelectorAll('#category-list li').forEach((li) => li.classList.remove('active'));
         
-            elementsToSearch.forEach((element) => {
-                const text = element.textContent.toLowerCase();
-                if (text.includes(query)) {
-                    results.push(element); // Add matching element to results array
-                    element.style.backgroundColor = 'yellow'; // Highlight the result
-                } else {
-                    element.style.backgroundColor = ''; // Clear previous highlights
+                    // Add active class to the selected category
+                    target.classList.add('active');
+        
+                    // Get the selected category
+                    const selectedCategory = target.dataset.category;
+        
+                    // Filter products based on the selected category
+                    filterProducts(selectedCategory);
                 }
             });
         
-            if (results.length > 0) {
-                // Scroll to the first result
-                results[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-                alert(`${results.length} matching result(s) found.`);
-            } else {
-                alert('No matching content found on the page.');
-            }
-        }
-        
-        // Event listener for "Go" button click
-        searchBtn.addEventListener('click', performSearch);
-        
-        // Event listener for "Enter" key press in the search input
-        searchInput.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
-                performSearch();
-            }
+            // Initialize with "All" category
+            filterProducts('all');
         });
         
-        // Reset all highlights when input is cleared
-        searchInput.addEventListener('input', () => {
-            if (!searchInput.value.trim()) {
-                const elementsToSearch = document.querySelectorAll(
-                    'h1, h2, h3, p, span, a, .btn, .read-more-btn, .product-item, .why-omnicore-section, .vision-section, .footer, .about-section, .hero-section'
-                );
-                elementsToSearch.forEach((element) => {
-                    element.style.backgroundColor = ''; // Clear highlights
-                });
-            }
-        });
-        
-    </script>
-    
-
-        <!-- JavaScript Filter and Pagination -->
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const categoryList = document.getElementById('category-list'); // The category list container
-                    const productItems = Array.from(document.querySelectorAll('.product-item')); // All product items
-                
-                    // Function to filter and display products based on category
-                    function filterProducts(selectedCategory) {
-                        productItems.forEach((item) => {
-                            const itemCategory = item.dataset.category; // Get the item's category from data-category attribute
-                
-                            // Show all products if 'all' is selected, otherwise show matching products
-                            if (selectedCategory === 'all' || itemCategory === selectedCategory) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        });
-                    }
-                
-                    // Add click event listener to each category
-                    categoryList.addEventListener('click', (event) => {
-                        if (event.target.tagName === 'LI') {
-                            // Remove active class from all categories
-                            document.querySelectorAll('#category-list li').forEach((li) => li.classList.remove('active'));
-                
-                            // Add active class to the selected category
-                            event.target.classList.add('active');
-                
-                            // Get the selected category
-                            const selectedCategory = event.target.dataset.category;
-                
-                            // Filter products based on the selected category
-                            filterProducts(selectedCategory);
-                        }
-                    });
-                
-                    // Initialize with "All" category
-                    filterProducts('all');
-                });
                                 
-        </script>
+    </script>
 
-        <!-- JavaScript Scroll to Top -->
-        <script>
+<!-- JavaScript Category list Filter-->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('category-search');
+            const suggestionsBox = document.getElementById('search-suggestions');
+            const productItems = Array.from(document.querySelectorAll('.product-item')); // All product items
+            const categories = document.querySelectorAll('#category-list li'); // Category list items
+        
+            // Function to filter products and show suggestions
+            function showSuggestions(query) {
+                const results = [];
+                suggestionsBox.innerHTML = ''; // Clear suggestions
+        
+                if (query.trim() === '') {
+                    suggestionsBox.style.display = 'none'; // Hide suggestions when input is empty
+                    return;
+                }
+        
+                productItems.forEach((item) => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(query.toLowerCase())) {
+                        results.push({ element: item, text: item.textContent });
+                    }
+                });
+        
+                if (results.length === 0) {
+                    suggestionsBox.style.display = 'none';
+                    return;
+                }
+        
+                results.forEach((result) => {
+                    const suggestion = document.createElement('li');
+                    suggestion.textContent = result.text;
+                    suggestion.addEventListener('click', () => {
+                        const category = result.element.dataset.category;
+                        navigateToCategory(category, result.element);
+                    });
+                    suggestionsBox.appendChild(suggestion);
+                });
+        
+                suggestionsBox.style.display = 'block';
+            }
+        
+            // Function to navigate to the category and element
+            function navigateToCategory(category, element) {
+                // Set the correct category as active
+                categories.forEach((cat) => {
+                    cat.classList.remove('active');
+                    if (cat.dataset.category === category) {
+                        cat.classList.add('active');
+                    }
+                });
+        
+                // Show products for the category
+                productItems.forEach((item) => {
+                    if (item.dataset.category === category || category === 'all') {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                    item.style.backgroundColor = ''; // Clear highlights
+                });
+        
+                // Highlight the specific element
+                element.style.backgroundColor = '#237f5d';
+        
+                // Scroll to the specific element
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        
+            // Event listener for real-time input in the search bar
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value;
+                showSuggestions(query);
+            });
+        
+            // Hide suggestions when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !suggestionsBox.contains(e.target)) {
+                    suggestionsBox.style.display = 'none';
+                }
+            });
+        
+            // Reset highlights when the input changes
+            searchInput.addEventListener('input', () => {
+                productItems.forEach((item) => {
+                    item.style.backgroundColor = ''; // Remove previous highlights
+                });
+            });
+        });
+    </script>
+
+    <!-- JavaScript Scroll to Top -->
+    <script>
                     const scrollToTopButton = document.getElementById('scrollToTop');
 
                 window.addEventListener('scroll', () => {
@@ -638,6 +680,7 @@
                         behavior: 'smooth',
                     });
                 });
-        </script>
+    </script>
+    
 </body>
 </html>
