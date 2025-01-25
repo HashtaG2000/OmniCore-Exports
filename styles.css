@@ -66,19 +66,24 @@ body  {
 }
 
 /* Navbar Logo Styles */
-.navbar-logo a {
-    font-family: 'AquaticoRegular', sans-serif; /* Fallback to sans-serif */
-    text-decoration: none; /* Remove underline */
-    color: #00a87e; /* Match the text color */
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar-logo img {
+    padding: 10px 0 0 0;
+    height: 40px; /* Adjust the height */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .navbar-logo a:hover {
     cursor: pointer; /* Indicate it's clickable */
 }
 
+.contact-info li {
+    list-style: none;
+}
 
+.contact-info li a {
+    text-decoration: none;
+    color: #00a87e;
+}
 
 /* General Navbar Styles */
 .navbar {
@@ -119,7 +124,7 @@ body  {
     
 }
 
-/* Hamburger Menu */
+
 /* Hamburger Menu */
 .navbar-toggle {
     display: none; /* Display the hamburger menu */
@@ -499,7 +504,7 @@ body  {
     padding: 0;
     max-height: 150px;
     overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 4px #f4f5f7;
     z-index: 1000;
     font-size: 14px;
 }
@@ -715,14 +720,18 @@ body  {
     /* About Section */
     .about-section {
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
 
-    .about-content,
-    .about-image {
+    .about-content {
         width: 100%;
         margin: 0;
         padding: 10px;
+    }
+    .about-image {
+        width: 100%;
+        margin: 0;
+        padding: 10px 0 0 0;
     }
 
     .about-content h2 {

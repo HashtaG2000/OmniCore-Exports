@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
@@ -34,8 +35,7 @@
             
             <!-- Logo -->
             <div class="navbar-logo">
-                <div class="FontMarket">
-                <a href="#home">OmniCore Exports</a></div>
+                <img src="images/logo.png" alt="onmicore-logo">
             </div>
     
             <!-- Navbar Links -->
@@ -45,9 +45,9 @@
                 <li><b><a href="#products">PRODUCTS</a></b></li>
                 <li><b><a href="#footer">CONTACT US</a></b></li>
             </ul>
-            <ul class="navbar-contact">
-                <li><b><a href="mailto:info@omnicore.in">info@omnicore.in</a></b></li>
-                <li><b><a href="">+91-1234567890</a></b></li>
+            <ul class="contact-info">
+                <li><a href="mailto:info@omnicore.in">info@omnicore.in</a></li>
+                <li><a href="">+91-1234567890</a></li>
             </ul>
     
         </nav>
@@ -499,12 +499,12 @@
                 <h2>OmniCore Exports</h2>
             </div>
             <div class="footer-item">
-                <h3>Address</h3>
-                <p>Mulund Colony, Mulund West, Mumbai – 400082</p>
+                <p>Address: Mulund Colony, Mulund West, Mumbai – 400082</p>
             </div>
             <div class="footer-item">
                 <h3>Reach out</h3>
                 <p><a href="mailto:info@omnicore.in">info@omnicore.in</a></p>
+                <p><a href="">+91-1234567890</a></p>
             </div>
         </div>
     </footer>
@@ -523,7 +523,29 @@
                 navbarLinks.classList.toggle('active'); // Toggle the 'active' class
             });
     </script>
-    
+  
+<!-- Javascript Toggle behaviour    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('menu');
+        
+            hamburger.addEventListener('click', () => {
+                // Toggle "open" class on hamburger and menu
+                hamburger.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+        
+            // Optional: Close menu when clicking outside (improves UX)
+            document.addEventListener('click', (event) => {
+                if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+                    hamburger.classList.remove('open');
+                    menu.classList.remove('open');
+                }
+            });
+        });    
+    </script> -->
+
 <!-- JavaScript Filter and Pagination -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
